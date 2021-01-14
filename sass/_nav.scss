@@ -1,0 +1,151 @@
+// .nav-container {
+//   background: $main-color;
+// }
+// header {
+//   display: flex;
+//   flex: 1;
+//   justify-content: space-between;
+//   a {
+//     color: white;
+//   }
+//   div {
+//     width: 100%;
+//   }
+//   .logo {
+//     text-align: center;
+//   }
+// }
+// .navigation {
+//   display: flex;
+//   flex-direction: row;
+// }
+// .navigation-right {
+//   justify-content: flex-end;
+// }
+
+.nav-closed {
+  position: absolute;
+  transform: translateX(-100%);
+  background: $main-color;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 10;
+  transition: all 0.5s ease;
+  header {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    a {
+      color: white;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: $font-size-large;
+      line-height: 70px;
+    }
+  }
+}
+.close-btn {
+  position: absolute;
+  height: 130px;
+  width: 150px;
+  text-align: right;
+  right: 0;
+  top: 0;
+  padding: 2em;
+  cursor: pointer;
+  img {
+    width: 70px;
+    height: auto;
+  }
+}
+.nav-open {
+  display: flex;
+  width: 100%;
+  height: 70px;
+  background: $main-color;
+  transition: all 0.5s ease;
+  align-items: center;
+  justify-content: space-between;
+  .navigation-open-left {
+    display: none;
+  }
+  .burger-btn {
+    cursor: pointer;
+    img {
+      width: 70px;
+      height: auto;
+    }
+  }
+  @media only screen and (min-width: 1200px) {
+    background: $main-color;
+    header {
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      a {
+        color: white;
+      }
+      div {
+        width: 100%;
+      }
+      .logo {
+        display: initial;
+        text-align: center;
+      }
+    }
+    .burger-btn {
+      display: none;
+    }
+    .navigation {
+      display: flex;
+      flex-direction: row;
+    }
+    .navigation-open-right {
+      justify-content: flex-end;
+    }
+  }
+}
+
+// .close-btn {
+//   position: absolute;
+//   height: 130px;
+//   width: 150px;
+//   text-align: right;
+//   right: 0;
+//   top: 0;
+//   padding: 2em;
+//   cursor: pointer;
+//   img {
+//     width: 70px;
+//     height: auto;
+//   }
+// }
+
+// .nav-container {
+//   background: $main-color;
+//   width: 100%;
+//   height: 100%;
+//   position: absolute;
+// }
+
+.logo {
+  display: none;
+}
+// .close-btn {
+//   position: absolute;
+//   height: 130px;
+//   width: 150px;
+//   text-align: right;
+//   right: 0;
+//   top: 0;
+//   padding: 2em;
+//   cursor: pointer;
+//   img {
+//     width: 70px;
+//     height: auto;
+//   }
+// }
