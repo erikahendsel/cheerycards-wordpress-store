@@ -10,12 +10,13 @@ $main-color: #bd0c41;
   text-transform: uppercase;
   font-weight: 700;
   z-index: 2;
+  cursor: pointer;
   background-color: rgb(255, 255, 255);
   border-color: rgb(70, 23, 122);
   color: rgb(70, 23, 122);
   box-shadow: rgb(70, 23, 122) 6px 7px 0px 0px;
   transition: all 0.2s ease;
   &:hover {
-    box-shadow: rgb(70, 23, 122) 6px 9px 2px 0px;
+    box-shadow: rgb(70, 23, 122) 6px 9px 0px 0px;
   }
 }

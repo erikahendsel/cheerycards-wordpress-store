@@ -30,7 +30,7 @@
                 <?php
                 $link = get_field('flash_link_button_first');
                 if ($link) : ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">Shop now</a>
+                    <button class="button" href="<?php echo esc_url($link); ?>">Shop now</button>
                 <?php endif; ?>
             </div>
             <div class="flash-block flash-two">
@@ -43,10 +43,49 @@
                 <?php
                 $link = get_field('flash_link_button_second');
                 if ($link) : ?>
-                    <a class="button" href="<?php echo esc_url($link); ?>">Shop now</a>
+                    <button class="button" href="<?php echo esc_url($link); ?>">Shop now</button>
                 <?php endif; ?>
             </div>
 
+        </div>
+    </section>
+
+    <section class='popular-cards'>
+        <h3>Popular Cards</h3>
+        <div class="popular-container">
+
+            <?php
+            // Check rows exists.
+            if (have_rows('popular_cards')) :
+                // Loop through rows.
+                while (have_rows('popular_cards')) : the_row();
+                    // Load sub field value.
+                    $sub_image = get_sub_field('popular_card_image');
+                    $sub_title = get_sub_field('popular_card_title');
+                    $sub_link = get_sub_field('popular_card_link');
+
+                    // Do something...
+                    if (!empty($sub_image)) : ?>
+                        <div class="popular-card">
+                            <img class='flash-img' src="<?php echo esc_url($sub_image['url']); ?>" alt="<?php echo esc_attr($sub_image['alt']); ?>" />
+
+                            <p class='popular-title'><?php echo $sub_title ?></p>
+
+                            <?php
+                            if ($sub_link) : ?>
+                                <div class='shop-now-container'>
+                                    <button class="button" href="<?php echo esc_url($sub_link); ?>">Shop now</button>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+            <?php endif;
+
+                // End loop.
+                endwhile;
+            // No value.
+            else :
+            // Do something...
+            endif; ?>
         </div>
     </section>
 
