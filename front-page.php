@@ -120,6 +120,32 @@
         </div>
     </section>
 
+    <section class='benefits'>
+        <div class="benefits-container">
+            <div class="much-more">
+                <img src="<?php echo get_template_directory_uri(); ?>./resources/icons/heart-card.svg">
+                <p class="benefits-title">
+                    So much more than cards
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim, pellentesque at sed felis ornare posuere pellentesque.</p>
+            </div>
+            <div class="much-more">
+                <img src="<?php echo get_template_directory_uri(); ?>./resources/icons/download-icon.svg">
+                <p class="benefits-title">
+                    Fast & Easy Downlaod
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim, pellentesque at sed felis ornare posuere pellentesque.</p>
+            </div>
+            <div class="much-more">
+                <img src="<?php echo get_template_directory_uri(); ?>./resources/icons/bank-card-icon.svg">
+                <p class="benefits-title">
+                    Comfortable & Secure Payments
+                </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet enim, pellentesque at sed felis ornare posuere pellentesque.</p>
+            </div>
+        </div>
+    </section>
+
 </div>
 
 <?php get_footer(); ?>

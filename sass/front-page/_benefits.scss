@@ -1,0 +1,18 @@
+.benefits-container {
+  display: flex;
+  padding: 2em;
+  gap: 2em;
+  text-align: center;
+  align-items: center;
+  img {
+    height: 70px;
+  }
+}
+.benefits-title {
+  font-weight: bold;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: $font-size-medium;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
