@@ -41,3 +41,23 @@ register_nav_menus(
 
 add_image_size('smallest', 300, 300, true);
 add_image_size('largest', 800, 800, true);
+
+
+//Add ACF options page(setting in wordpress)
+if (function_exists('acf_add_options_page')) {
+
+    acf_add_options_page();
+    acf_add_options_page(array(
+        'page_title'     => 'Theme General Settings',
+        'menu_title'    => 'Theme Settings',
+        'menu_slug'     => 'theme-general-settings',
+        'capability'    => 'edit_posts',
+        'redirect'        => false
+    ));
+
+    acf_add_options_sub_page(array(
+        'page_title'     => 'Footer Settings',
+        'menu_title'    => 'Footer',
+        'parent_slug'    => 'theme-general-settings',
+    ));
+}

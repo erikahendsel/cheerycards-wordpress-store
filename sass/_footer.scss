@@ -1,0 +1,24 @@
+footer {
+  padding: 4em 2em 2em 2em;
+  background: $main-color;
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    color: white;
+    margin-top: 30px;
+  }
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menu-block {
+  .footer-menu-link,
+  .footer-title {
+    color: white;
+  }
+  .footer-title {
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+}
