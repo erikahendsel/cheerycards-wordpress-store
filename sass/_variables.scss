@@ -20,3 +20,14 @@ $main-color: #bd0c41;
     box-shadow: rgb(70, 23, 122) 6px 9px 0px 0px;
   }
 }
+
+.card {
+  position: relative;
+  .button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include shop-now-button;
+  }
+}

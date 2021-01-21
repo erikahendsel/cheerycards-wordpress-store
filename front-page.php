@@ -20,7 +20,7 @@
     <!-- Flash section ie news/sales/information block -->
     <section class='flash'>
         <div class="flash-container">
-            <div class="flash-block flash-one">
+            <div class="flash-block card">
                 <?php
                 $image = get_field('flash_image_first');
                 if (!empty($image)) : ?>
@@ -33,7 +33,7 @@
                     <button class="button" href="<?php echo esc_url($link); ?>">Shop now</button>
                 <?php endif; ?>
             </div>
-            <div class="flash-block flash-two">
+            <div class="flash-block card">
                 <?php
                 $image = get_field('flash_image_second');
                 if (!empty($image)) : ?>
@@ -82,6 +82,37 @@
 
                 // End loop.
                 endwhile;
+            // No value.
+            else :
+            // Do something...
+            endif; ?>
+        </div>
+    </section>
+
+    <section class='shout-out'>
+        <h3>Shout Out Cards</h3>
+        <div class="container">
+            <?php
+            if (have_rows('shout_out_cards')) :
+                while (have_rows('shout_out_cards')) : the_row();
+
+                    $sub_image = get_sub_field('shout_out_image');
+                    $sub_link = get_sub_field('shout_out_link');
+                    // Do something...
+                    if (!empty($sub_image)) : ?>
+                        <div class="shout-out-card card">
+                            <img class='shout-img' src="<?php echo esc_url($sub_image['url']); ?>" alt="<?php echo esc_attr($sub_image['alt']); ?>" />
+
+                            <?php
+                            if ($sub_link) : ?>
+                                <button class="button" href="<?php echo esc_url($sub_link); ?>">Shop now</button>
+                            <?php endif; ?>
+                        </div>
+            <?php endif;
+
+                // End loop.
+                endwhile;
+
             // No value.
             else :
             // Do something...
